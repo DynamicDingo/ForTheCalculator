@@ -1,0 +1,84 @@
+
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Main {
+  public static void main(String[] args) {
+    
+    while(true){
+      Scanner scanN = new Scanner(System.in);
+
+        System.out.println("Enter the first number");
+        int num1 = scanN.nextInt();
+        System.out.println("Enter the second number");
+        int num2 = scanN.nextInt();
+
+        System.out.println("Enter the operator");
+        String op = scanN.next();
+
+
+        if (op.equals("+")){
+          System.out.println(num1 + num2);
+        }
+        else if (op.equals("-")){
+          System.out.println(num1 - num2);
+        }
+        else if (op.equals("*")){
+          System.out.println(num1 * num2);
+        }
+        else if (op.equals("square")){
+          System.out.println(num1 * num1);
+          System.out.println(num2 * num2);
+        }
+        else if (op.equals("root")){
+          if(num2 > 0 && num1 > 0){
+            System.out.println(num1 / num1);
+            System.out.println(num2 / num2);
+          }
+        }
+        else if (op.equals("expo")){
+          System.out.println(Math.pow(num1, num2));
+        }
+        else if (op.equals("sin")){
+          System.out.println(Math.sin(num1));
+          System.out.println(Math.sin(num2));
+        }
+        else if (op.equals("tan")){
+          System.out.println(Math.tan(num1));
+          System.out.println(Math.tan(num2));
+        }
+        else if (op.equals("cos")){
+          System.out.println(Math.cos(num1));
+          System.out.println(Math.cos(num2));
+        }
+        else if (op.equals("log")){
+          if(num2 > 0 && num1 > 0){
+            System.out.println(Math.log(num1));
+            System.out.println(Math.log(num2));
+          }
+        }
+       
+
+        if (op.equals("/")){
+          if(num2 != 0 && num1 != 0){
+            System.out.println(num1 / num2);
+          }
+          else{
+            System.out.println("Cannot divide by zero");
+          }
+
+        }
+
+        if(op.equals("exit")){
+          scanN.close();
+          System.exit(0);
+        }
+
+
+
+       }
+        
+    
+  }
+  
+}
